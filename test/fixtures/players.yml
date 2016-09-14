@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstName: MyString
+  lastName: MyString
+  position: MyString
+  fppg: MyString
+  played: MyString
+  salary: MyString
+  game: MyString
+  team: MyString
+  opponent: MyString
+  injury: MyString
+  injuryDetails: MyString
+
+two:
+  firstName: MyString
+  lastName: MyString
+  position: MyString
+  fppg: MyString
+  played: MyString
+  salary: MyString
+  game: MyString
+  team: MyString
+  opponent: MyString
+  injury: MyString
+  injuryDetails: MyString
