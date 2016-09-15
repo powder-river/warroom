@@ -3,6 +3,10 @@ class Api::V1::PlayersController < Api::V1::BaseController
     respond_with Player.all
   end
 
+  def filter
+    respond_with Player.where position: "WR"
+  end
+
   def create
     respond_with :api, :v1, Player.upload_player_data(fd_csv: params[:fd_csv], player_set: params[:player_set])
   end

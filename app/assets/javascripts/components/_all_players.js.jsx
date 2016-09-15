@@ -1,4 +1,15 @@
 var AllPlayers = React.createClass({
+  handleFilter(){
+    $.ajax({
+      url: `api/v1/filter.json`,
+      type: "GET",
+      success: () => {
+        this.setState({players: response});
+      }
+    });
+  },
+
+
   render(){
     var players = this.props.players.map((player) => {
       return(
@@ -17,6 +28,7 @@ var AllPlayers = React.createClass({
 
     return(
       <div>
+      <button onClick={ this.handleFilter }>Push</button>
         <table>
           <thead>
             <tr>
