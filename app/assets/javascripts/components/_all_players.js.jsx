@@ -22,7 +22,7 @@ var AllPlayers = React.createClass({
       <div>
 
       {/* <button onClick={ this.handleUpdate }>Push</button> */}
-        <table>
+        <table className="tables">
           <thead>
             <tr>
               <th> Position </th>

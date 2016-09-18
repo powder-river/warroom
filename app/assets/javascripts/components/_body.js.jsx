@@ -11,7 +11,7 @@ var Body = React.createClass({
     $.ajax({
       url: `api/v1/filter.json`,
       method: "GET",
-      data: {position: position},
+      data: position,
       success: (response) => {
         this.filterPlayers(response);
       }

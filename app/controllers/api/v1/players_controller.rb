@@ -4,8 +4,10 @@ class Api::V1::PlayersController < Api::V1::BaseController
   end
 
   def filter
-    # blowup
-    respond_with Player.where position: params[:position]
+    puts "#{params[:salary].to_i}".colorize(:red)
+    # respond_with Player.where(position: params[:position]).where(salary: params[:salary])
+    respond_with Player.where("position = ? AND salary >= ?",params[:position],params[:salary])
+
   end
 
   def create
@@ -25,6 +27,6 @@ class Api::V1::PlayersController < Api::V1::BaseController
   private
 
   def item_params
-    params.require(:player).permit(:position)
+    params.require(:player).permit(:position,:salary)
   end
 end
