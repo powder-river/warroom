@@ -28,7 +28,14 @@ var FilterMenu = React.createClass({
         </div>
 
         <div>
-          <label>Salary</label><input type="text" name="salary" onChange={ this.handleUpdate }/>
+          <label>Salary</label>
+          <select onChange={ this.handleUpdate } name="saloption">
+            <option value=">=">Greater Than</option>
+            <option value="<="> Less Than </option>
+            <option value="="> Equals </option>
+          </select>
+
+          <input type="text" name="salary" defaultValue="0" onChange={ this.handleUpdate }/>
         </div>
         {/* <button>press</button> */}
         </form>
