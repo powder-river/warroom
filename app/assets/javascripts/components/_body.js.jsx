@@ -7,22 +7,19 @@ var Body = React.createClass({
     $.getJSON('api/v1/players.json', response => {this.setState({players: response})})
   },
 
-  updatePlayers(){
-    console.log("Running FIlter")
+  updatePlayers(position){
     $.ajax({
       url: `api/v1/filter.json`,
       method: "GET",
+      data: {position: position},
       success: (response) => {
-        console.log(response)
-        this.filterPlayers({players: response});
+        this.filterPlayers(response);
       }
     });
   },
 
   filterPlayers(players){
-    console.log("replacingState")
-    this.replaceState({players: players})
-    console.log("done")
+    this.setState({players: players})
   },
 
 
@@ -30,7 +27,8 @@ var Body = React.createClass({
     return(
 
       <div>
-        <AllPlayers players={ this.state.players } updatePlayers={ this.updatePlayers } />
+        <FilterMenu updatePlayers={ this.updatePlayers }/>
+        <AllPlayers players={ this.state.players }  />
       </div>
     )
   }

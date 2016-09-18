@@ -4,7 +4,8 @@ class Api::V1::PlayersController < Api::V1::BaseController
   end
 
   def filter
-    respond_with Player.where position: "WR"
+    # blowup
+    respond_with Player.where position: params[:position]
   end
 
   def create
@@ -24,6 +25,6 @@ class Api::V1::PlayersController < Api::V1::BaseController
   private
 
   def item_params
-    params.require(:player).permit(:id, :player_set, :fd_csv)
+    params.require(:player).permit(:position)
   end
 end

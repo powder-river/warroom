@@ -1,8 +1,6 @@
 var AllPlayers = React.createClass({
 
-  handleUpdate(){
-    this.props.updatePlayers()
-  },
+
 
   render(){
     var players = this.props.players.map((player) => {
@@ -23,7 +21,7 @@ var AllPlayers = React.createClass({
     return(
       <div>
 
-      <button onClick={ this.handleUpdate }>Push</button>
+      {/* <button onClick={ this.handleUpdate }>Push</button> */}
         <table>
           <thead>
             <tr>
