@@ -1,5 +1,4 @@
 class Player < ApplicationRecord
-  require "csv"
   belongs_to :player_set
 
   def self.upload_player_data(fd_csv: nil, player_set: nil)
@@ -8,4 +7,5 @@ class Player < ApplicationRecord
       played: r[5],salary: r[6],game: r[7],team: r[8],opponent: r[9],injury: r[10],injuryDetails: r[11])
     end
   end
+  
 end

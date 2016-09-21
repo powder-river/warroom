@@ -19,12 +19,15 @@ var FilterMenu = React.createClass({
         <div>
           <h2>Filters</h2>
 
-          <label>QB</label><input type="radio" name="position" value="QB" onChange={this.handleUpdate}/>
-          <label>RB</label><input type="radio" name="position" value="RB" onChange={this.handleUpdate}/>
-          <label>WR</label><input type="radio" name="position" value="WR" onChange={this.handleUpdate}/>
-          <label>TE</label><input type="radio" name="position" value="TE" onChange={this.handleUpdate}/>
-          <label>K</label><input type="radio" name="position" value="K" onChange={this.handleUpdate}/>
-          <label>DEF</label><input type="radio" name="position" value="D" onChange={this.handleUpdate}/>
+          <label>Salary</label>
+          <select onChange={ this.handleUpdate } name="position">
+            <option value="QB">QB</option>
+            <option value="RB">RB</option>
+            <option value="WR">WR</option>
+            <option value="TE">TE</option>
+            <option value="K">K</option>
+            <option value="D">DEF</option>
+          </select>
         </div>
 
         <div>
