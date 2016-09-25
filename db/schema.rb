@@ -47,12 +47,16 @@ ActiveRecord::Schema.define(version: 20160913222328) do
     t.string   "longReceive"
     t.string   "catchPerGame"
     t.string   "receiveYardsPerGame"
+    t.string   "receiveFumbles"
+    t.string   "touches"
     t.string   "rushYards"
     t.string   "rushTouchdowns"
     t.string   "longRush"
     t.string   "yardsPerCarry"
     t.string   "rushPerGame"
     t.string   "touchPerGame"
+    t.string   "rushFumbles"
+    t.integer  "touchdowns"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

@@ -34,14 +34,19 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
       t.string :longReceive
       t.string :catchPerGame
       t.string :receiveYardsPerGame
+      t.string :receiveFumbles
 
       #rushing
+      t.string :touches
       t.string :rushYards
       t.string :rushTouchdowns
       t.string :longRush
       t.string :yardsPerCarry
       t.string :rushPerGame
       t.string :touchPerGame
+      t.string :rushFumbles
+
+      t.integer :touchdowns
 
 
 
