@@ -29,6 +29,7 @@ class Statistics
         player[name][:gamesPlayed] = rec[5].content #games
         player[name][:started] = rec[6].content # games started
         player[name][:targets] = rec[7].content #targets
+        player[name][:targetsPerGame] = (player[name][:targets].to_f / player[name][:gamesPlayed].to_f).to_i
         player[name][:receptions] = rec[8].content #receptions
         player[name][:catchPercentage] = rec[9].content.gsub('%',"") #catch %
         player[name][:catchYards] = rec[10].content #yards

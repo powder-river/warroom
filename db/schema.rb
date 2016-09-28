@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160913222328) do
     t.integer  "comPerGame"
     t.integer  "attemptsPerGame"
     t.string   "targets"
+    t.integer  "targetsPerGame"
     t.string   "receptions"
     t.string   "catchPercentage"
     t.string   "catchYards"

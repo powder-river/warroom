@@ -1,4 +1,4 @@
-var RunningBacks = React.createClass({
+var Recievers = React.createClass({
   render(){
     var players = this.props.players.map((player) => {
       return(
@@ -8,11 +8,11 @@ var RunningBacks = React.createClass({
           <td>{ player.salary }</td>
           <td>{ player.fppg }</td>
           <td>{ player.game }</td>
-          <td>{ player.touchPerGame }</td>
-          <td>{ player.rushPerGame }</td>
-          <td>{player.yardsPerCarry }</td>
+          <td>{ player.targetsPerGame }</td>
+          <td>{ player.catchPerGame }</td>
+          <td>{ player.receiveYardsPerGame }</td>
+          <td>{ player.yardsPerCatch }</td>
           <td>{ player.touchdowns }</td>
-
         </tr>
       )
     });
@@ -29,9 +29,10 @@ var RunningBacks = React.createClass({
               <th> Salary </th>
               <th> FPPG </th>
               <th> Game </th>
-              <th> Touch/Game </th>
-              <th> Rush/Game </th>
-              <th> Yards/Carry </th>
+              <th> Targets/G </th>
+              <th> Catch/Game </th>
+              <th> Yards/Game </th>
+              <th> Yards/Catch </th>
               <th> Touchdowns </th>
             </tr>
           </thead>

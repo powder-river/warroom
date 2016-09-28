@@ -28,6 +28,7 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
 
       #receiving
       t.string :targets
+      t.integer :targetsPerGame
       t.string :receptions
       t.string :catchPercentage
       t.string :catchYards
