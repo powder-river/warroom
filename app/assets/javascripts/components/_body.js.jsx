@@ -7,11 +7,11 @@ var Body = React.createClass({
     $.getJSON('api/v1/players.json', response => {this.setState({players: response})})
   },
 
-  updatePlayers(position){
+  updatePlayers(filters){
     $.ajax({
       url: `api/v1/filter.json`,
       method: "GET",
-      data: position,
+      data: filters,
       success: (response) => {
         this.filterPlayers(response);
       }

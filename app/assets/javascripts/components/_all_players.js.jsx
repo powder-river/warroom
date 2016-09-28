@@ -1,16 +1,13 @@
 var AllPlayers = React.createClass({
-
-
-
   render(){
     var players = this.props.players.map((player) => {
       return(
         <tr key={ player.id }>
           <td>{ player.position }</td>
-          <td>{ player.firstName } { player.lastName }</td>
+          <td>{ player.name }</td>
           <td>{ player.salary }</td>
           <td>{ player.fppg }</td>
-          <td>{ player.played }</td>
+          <td>{ player.gamesPlayed }</td>
           <td>{ player.game }</td>
           <td>{ player.injury }</td>
           <td>{ player.injuryDetails }</td>

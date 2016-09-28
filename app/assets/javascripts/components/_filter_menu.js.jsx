@@ -2,9 +2,7 @@ var FilterMenu = React.createClass({
 
   handleUpdate(event){
     console.log($('form').serializeArray());
-    // this.props.updatePlayers(event.target.value)
     this.props.updatePlayers($('form').serializeArray());
-
   },
 
   corgi(event){
@@ -21,6 +19,7 @@ var FilterMenu = React.createClass({
 
           <label>Salary</label>
           <select onChange={ this.handleUpdate } name="position">
+            <option value="*">ALL</option>
             <option value="QB">QB</option>
             <option value="RB">RB</option>
             <option value="WR">WR</option>

@@ -25,7 +25,7 @@ class Statistics
         player = { name => {}}
         player[name][:team] = rec[2].content #team
         player[name][:age] = rec[3].content #age
-        player[name][:position] = rec[4].content.upcase #position
+        # player[name][:position] = rec[4].content.upcase #position
         player[name][:gamesPlayed] = rec[5].content #games
         player[name][:started] = rec[6].content # games started
         player[name][:targets] = rec[7].content #targets
@@ -58,7 +58,7 @@ class Statistics
 
         player[name][:team] = rush[2].content #team
         player[name][:age] = rush[3].content #age
-        player[name][:position] = rush[4].content.upcase #position
+        # player[name][:position] = rush[4].content.upcase #position
         player[name][:gamesPlayed] = rush[5].content #games
         player[name][:started] = rush[6].content #started
         player[name][:touches] = rush[7].content #touches
@@ -89,7 +89,7 @@ class Statistics
 
         player[name][:team] = ps[2].content #team
         player[name][:age] = ps[3].content #age
-        player[name][:position] = ps[4].content.upcase #position
+        # player[name][:position] = ps[4].content.upcase #position
         player[name][:gamesPlayed] = ps[5].content #games
         player[name][:started] = ps[6].content #started
         player[name][:completions] = ps[8].content #completions
