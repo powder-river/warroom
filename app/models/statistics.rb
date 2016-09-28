@@ -93,7 +93,9 @@ class Statistics
         player[name][:gamesPlayed] = ps[5].content #games
         player[name][:started] = ps[6].content #started
         player[name][:completions] = ps[8].content #completions
+        player[name][:comPerGame] = (player[name][:completions].to_f / player[name][:gamesPlayed].to_f).to_i
         player[name][:passingAttempts] = ps[9].content #attempts
+        player[name][:attemptsPerGame] = (player[name][:passingAttempts].to_f / player[name][:gamesPlayed].to_f).to_i
         player[name][:completionPercent] = ps[10].content #completion percent
         player[name][:passYards] = ps[11].content #yards
         player[name][:passTouchdowns] = ps[12].content #touchdowns

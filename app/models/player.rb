@@ -6,7 +6,7 @@ class Player < ApplicationRecord
     categories = ["passing","rushing","receiving"]
     #load initial fanduel data
     CSV.foreach("fd_sample.csv" ,:headers => true, :header_converters => :symbol) do |r|
-      player = player_set.players.create(position: r[1], name: "#{r[2].upcase} #{r[3].upcase}",fppg: r[4],
+      player = player_set.players.create(position: r[1], name: "#{r[2].upcase} #{r[3].upcase}",fppg: r[4].to_i,
       gamesPlayed: r[5],salary: r[6],game: r[7],team: r[8],opponent: r[9],injury: r[10],injuryDetails: r[11])
 
       categories.each{|category| load_player_stats(stats: stats, category: category, player: player)}

@@ -6,7 +6,7 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
       t.string :position
       t.string :age
       t.string :team
-      t.string :fppg
+      t.integer :fppg
       t.string :started
       t.string :gamesPlayed
       t.string :salary
@@ -23,6 +23,8 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
       t.string :passYards
       t.string :passTouchdowns
       t.string :passPerGame
+      t.integer :comPerGame
+      t.integer :attemptsPerGame
 
       #receiving
       t.string :targets

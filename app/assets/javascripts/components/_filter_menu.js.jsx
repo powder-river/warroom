@@ -1,14 +1,9 @@
 var FilterMenu = React.createClass({
 
   handleUpdate(event){
-    console.log($('form').serializeArray());
+    // console.log($('form').serializeArray());
     this.props.updatePlayers($('form').serializeArray());
   },
-
-  corgi(event){
-    console.log($('form').serializeArray());
-  },
-
 
   render(){
     return(

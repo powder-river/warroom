@@ -1,4 +1,4 @@
-var Passers = React.createClass({
+var RunningBacks = React.createClass({
   render(){
     var players = this.props.players.map((player) => {
       return(
@@ -7,12 +7,10 @@ var Passers = React.createClass({
           <td>{ player.name }</td>
           <td>{ player.salary }</td>
           <td>{ player.fppg }</td>
+          <td>{ player.gamesPlayed }</td>
           <td>{ player.game }</td>
-          <td>{ player.comPerGame }</td>
-          <td>{ player.attemptsPerGame }</td>
-          <td>{ player.passPerGame }</td>
-          <td>{ player.touchdowns }</td>
-
+          <td>{ player.injury }</td>
+          <td>{ player.injuryDetails }</td>
         </tr>
       )
     });
@@ -28,11 +26,10 @@ var Passers = React.createClass({
               <th> Name </th>
               <th> Salary </th>
               <th> FPPG </th>
+              <th> Played </th>
               <th> Game </th>
-              <th> Comp/Game </th>
-              <th> Att/Game </th>
-              <th> YD/Game </th>
-              <th> TD </th>
+              <th> Injury </th>
+              <th> Inj. Details </th>
             </tr>
           </thead>
           <tbody>
