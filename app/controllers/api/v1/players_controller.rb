@@ -4,9 +4,11 @@ class Api::V1::PlayersController < Api::V1::BaseController
   end
 
   def filter
-    puts "#{params.inspect}".colorize(:red)
-    # respond_with Player.where(position: params[:position]).where(salary: params[:salary])
-    respond_with Player.where("position = ? AND salary #{params[:saloption]} ?",params[:position],params[:salary])
+    # if params[:position] "QB"
+    #   respond_with Player.where("position = QB AND passPerGame #{params[:qbYardsOption]} ?",params[:qbYards] )
+    # else
+      respond_with Player.where("position = ? AND salary #{params[:saloption]} ?",params[:position],params[:salary])
+    # end
 
   end
 

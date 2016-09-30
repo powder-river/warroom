@@ -26,17 +26,18 @@ var Body = React.createClass({
 
   render(){
     var filteredTable;
-      if(this.state.position === "QB"){
-        var filteredTable = <Passers players={ this.state.players } />;
-      }else if(this.state.position === "RB"){
-        var filteredTable = <RunningBacks players={ this.state.players }/>;
-      }else if(this.state.position === "WR" || this.state.position === "TE"){
-        var filteredTable= <Recievers players={ this.state.players }/>;
-      }else{
-        var filteredTable= <AllPlayers players={ this.state.players }/>;
-      }
-    return(
 
+    if(this.state.position === "QB"){
+      var filteredTable = <Passers players={ this.state.players } />;
+    }else if(this.state.position === "RB"){
+      var filteredTable = <RunningBacks players={ this.state.players }/>;
+    }else if(this.state.position === "WR" || this.state.position === "TE"){
+      var filteredTable= <Recievers players={ this.state.players }/>;
+    }else{
+      var filteredTable= <AllPlayers players={ this.state.players }/>;
+    }
+
+    return(
       <div>
         <FilterMenu updatePlayers={ this.updatePlayers }/>
         { filteredTable }

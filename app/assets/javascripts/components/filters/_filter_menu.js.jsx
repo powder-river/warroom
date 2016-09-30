@@ -1,11 +1,17 @@
 var FilterMenu = React.createClass({
-
-  handleUpdate(event){
-    // console.log($('form').serializeArray());
+  handleFilter(event){
+    console.log($('form').serializeArray());
     this.props.updatePlayers($('form').serializeArray());
   },
 
+
   render(){
+    var positionFilters;
+
+    if(1>0){
+      var positionFilters = <QuarterBacksFilter filter={ this.handleFilter }/> ;
+    }
+
     return(
       <div>
       <form>
@@ -13,7 +19,7 @@ var FilterMenu = React.createClass({
           <h2>Filters</h2>
 
           <label>Salary</label>
-          <select onChange={ this.handleUpdate } name="position">
+          <select onChange={ this.handleFilter } name="position">
             <option value="*">ALL</option>
             <option value="QB">QB</option>
             <option value="RB">RB</option>
@@ -26,14 +32,17 @@ var FilterMenu = React.createClass({
 
         <div>
           <label>Salary</label>
-          <select onChange={ this.handleUpdate } name="saloption">
+          <select onChange={ this.handleFilter } name="saloption">
             <option value=">=">Greater Than</option>
             <option value="<="> Less Than </option>
             <option value="="> Equals </option>
           </select>
-
-          <input type="text" name="salary" defaultValue="0" onChange={ this.handleUpdate }/>
+          <input type="text" name="salary" defaultValue="0" onChange={ this.handleFilter }/>
         </div>
+
+        { positionFilters }
+
+        {/* <QuarterBacksFilter filter={ this.handleFilter }/> */}
         {/* <button>press</button> */}
         </form>
       </div>
