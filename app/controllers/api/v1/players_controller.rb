@@ -4,12 +4,11 @@ class Api::V1::PlayersController < Api::V1::BaseController
   end
 
   def filter
-    # if params[:position] "QB"
-    #   respond_with Player.where("position = QB AND passPerGame #{params[:qbYardsOption]} ?",params[:qbYards] )
-    # else
+    if params[:position] == "QB"
+      respond_with Player.search_qb(qb_params(params))
+    else
       respond_with Player.where("position = ? AND salary #{params[:saloption]} ?",params[:position],params[:salary])
-    # end
-
+    end
   end
 
   def create
@@ -30,5 +29,9 @@ class Api::V1::PlayersController < Api::V1::BaseController
 
   def item_params
     params.require(:player).permit(:position,:salary)
+  end
+
+  def qb_params(my_params)
+    my_params.permit(:salary,:saloption,:qbYards,:qbYardsOption)
   end
 end

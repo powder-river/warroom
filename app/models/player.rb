@@ -30,6 +30,11 @@ class Player < ApplicationRecord
   end
 
 
+  def self.search_qb(filters)
+     Player.where("position = 'QB' AND salary #{filters[:saloption]} ? AND passPerGame #{filters[:qbYardsOption]} ?",filters[:salary],filters[:qbYards])
+  end
+
+
   '''
   NOTE JETS AND BILLS WERE NOT IN ThIS DATA SET
   NOT FOUND
