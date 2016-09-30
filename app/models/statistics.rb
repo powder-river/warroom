@@ -100,7 +100,7 @@ class Statistics
         player[name][:completionPercent] = ps[10].content #completion percent
         player[name][:passYards] = ps[11].content #yards
         player[name][:passTouchdowns] = ps[12].content #touchdowns
-        player[name][:passPerGame] = ps[20].content #yards per game
+        player[name][:passPerGame] = ps[20].content.to_i#yards per game
         results[name] = player[name]
       end
     end

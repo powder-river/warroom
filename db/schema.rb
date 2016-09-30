@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160913222328) do
     t.string   "completionPercent"
     t.string   "passYards"
     t.string   "passTouchdowns"
-    t.string   "passPerGame"
+    t.integer  "passPerGame"
     t.integer  "comPerGame"
     t.integer  "attemptsPerGame"
     t.string   "targets"

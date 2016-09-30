@@ -8,7 +8,7 @@ var QuarterBacksFilter = React.createClass({
           <option value="<="> Less Than </option>
           <option value="="> Equals </option>
         </select>
-        <input type="text" name="qbYards" defaultValue="0" onChange={ this.props.filter }/>
+        <input type="number" name="qbYards" defaultValue="0" onChange={ this.props.filter }/>
       </div>
     )
   }
