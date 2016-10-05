@@ -1,14 +1,14 @@
 var FilterMenu = React.createClass({
   handleFilter(event){
-    console.log($('form').serializeArray());
+//     console.log($('form').serializeArray());
     this.props.updatePlayers($('form').serializeArray());
   },
 
 
   render(){
     var positionFilters;
-
-    if(1>0){
+    console.log(this.props.position)
+    if(this.props.position == "QB"){
       var positionFilters = <QuarterBacksFilter filter={ this.handleFilter }/> ;
     }
 

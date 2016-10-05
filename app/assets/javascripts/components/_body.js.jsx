@@ -34,12 +34,12 @@ var Body = React.createClass({
     }else if(this.state.position === "WR" || this.state.position === "TE"){
       var filteredTable= <Recievers players={ this.state.players }/>;
     }else{
-      var filteredTable= <AllPlayers players={ this.state.players }/>;
+      var filteredTable= <AllPlayers players={ this.state.players } />;
     }
 
     return(
       <div>
-        <FilterMenu updatePlayers={ this.updatePlayers }/>
+        <FilterMenu updatePlayers={ this.updatePlayers } position={ this.state.position }/>
         { filteredTable }
       </div>
     )

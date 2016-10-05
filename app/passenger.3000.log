@@ -1,0 +1,38 @@
+[ 2016-10-04 22:13:31.5881 1529/7f98e0c8e780 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-10-04 22:13:31.5939 1532/7f540287a780 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-10-04 22:13:31.5940 1532/7f540287a780 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-10-04 22:13:31.5978 1532/7f540287a780 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 1532
+[ 2016-10-04 22:13:31.6054 1548/7f3c686f7780 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-10-04 22:13:31.6060 1548/7f3c686f7780 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 1548
+2016/10/04 22:13:34 [error] 1568#0: *4 "/home/cabox/workspace/warroom/app/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2016/10/04 22:13:36 [error] 1568#0: *5 "/home/cabox/workspace/warroom/app/public/index.html" is not found (2: No such file or directory), client: 10.2.0.6, server: _, request: "GET / HTTP/1.1", host: "warroom-danai-adkisson283363.codeanyapp.com:443"
+2016/10/04 22:13:39 [error] 1568#0: *6 "/home/cabox/workspace/warroom/app/public/index.html" is not found (2: No such file or directory), client: 10.2.0.6, server: _, request: "GET / HTTP/1.1", host: "warroom-danai-adkisson283363.codeanyapp.com:443"
+
+
+[ 2016-10-04 22:13:54.2997 1532/7f53fbfff700 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-10-04 22:13:54.2997 1548/7f3c6687c700 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-10-04 22:13:54.2997 1532/7f540287a780 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-10-04 22:13:54.2997 1548/7f3c686f7780 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-10-04 22:13:54.2998 1548/7f3c65dfa700 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-10-04 22:13:54.2998 1548/7f3c65dfa700 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-10-04 22:13:54.2999 1532/7f53fbfff700 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.2999 1532/7f53fbfff700 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-10-04 22:13:54.3000 1548/7f3c6687c700 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-10-04 22:13:54.3002 1548/7f3c686f7780 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-10-04 22:13:54.3017 1532/7f53fabfd700 Ser/Server.h:817 ]: [ServerThr.3] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3017 1532/7f53fabfd700 Ser/Server.h:464 ]: [ServerThr.3] Shutdown finished
+[ 2016-10-04 22:13:54.3031 1532/7f53bffff700 Ser/Server.h:817 ]: [ServerThr.7] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3031 1532/7f53bffff700 Ser/Server.h:464 ]: [ServerThr.7] Shutdown finished
+[ 2016-10-04 22:13:54.3035 1532/7f53f97fb700 Ser/Server.h:817 ]: [ServerThr.5] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3035 1532/7f53f97fb700 Ser/Server.h:464 ]: [ServerThr.5] Shutdown finished
+[ 2016-10-04 22:13:54.3035 1532/7f53fb5fe700 Ser/Server.h:817 ]: [ServerThr.2] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3036 1532/7f53fb5fe700 Ser/Server.h:464 ]: [ServerThr.2] Shutdown finished
+[ 2016-10-04 22:13:54.3037 1532/7f53bebfd700 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-10-04 22:13:54.3037 1532/7f53bf5fe700 Ser/Server.h:817 ]: [ServerThr.8] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3038 1532/7f53bebfd700 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-10-04 22:13:54.3038 1532/7f53bf5fe700 Ser/Server.h:464 ]: [ServerThr.8] Shutdown finished
+[ 2016-10-04 22:13:54.3038 1532/7f53f8dfa700 Ser/Server.h:817 ]: [ServerThr.6] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3038 1532/7f53f8dfa700 Ser/Server.h:464 ]: [ServerThr.6] Shutdown finished
+[ 2016-10-04 22:13:54.3038 1532/7f53fa1fc700 Ser/Server.h:817 ]: [ServerThr.4] Freed 128 spare client objects
+[ 2016-10-04 22:13:54.3038 1532/7f53fa1fc700 Ser/Server.h:464 ]: [ServerThr.4] Shutdown finished
+[ 2016-10-04 22:13:54.4081 1532/7f540287a780 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished

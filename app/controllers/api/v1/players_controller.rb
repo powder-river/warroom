@@ -4,7 +4,7 @@ class Api::V1::PlayersController < Api::V1::BaseController
   end
 
   def filter
-    if params[:position] == "QB"
+    if params[:qbYardsOption] 
       respond_with Player.search_qb(qb_params(params))
     else
       respond_with Player.where("position = ? AND salary #{params[:saloption]} ?",params[:position],params[:salary])
